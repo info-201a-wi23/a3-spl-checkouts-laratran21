@@ -1,86 +1,57 @@
 ---
 title: "A3: SPL Library Checkouts"
+name: "Lara Tran"
 output: html_document
 ---
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+In this assignment, I will be analyzing a data set from the Seattle Public Library. The data set they published is based on book titles, authors, checkout year / month, and others collected from the library. I will be answering questions I have about the data set, such as how many books were checked out a year, the most people checked out for a physical book, etc. I want to learn more about the trends of the Seaatle public Library book checkout trends which I am hoping to find answers with the values I use.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
+One of the 5 values I wanted to find were (book_checkout) the most physical book checkouts in the whole data set and that came out to be 6397967. Another value I decided to look at is the E-book checkouts from the whole data set (ebook_checkout) and the value I got is 5053218. I also wanted to find the year with the most checkouts which is 2020 (checkout_max). The next value I decided to look for was the maximum checkouts for 2022 (max_checkout) which came out to be 2950. I also decided to find the year with the lowest checkouts and that is 2017 (min_checkouts).
 
 ### The Dataset
 
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
+-   Who collected/published the data?
 
+The Seattle Public Library
+
+-   What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
+
+The parameters of the data are usage class, checkout type, material type, checkout year, checkout month, checkouts, title, ISBN, creator, subjects, publisher, and publication year. In this data set there are 12 columns with 816,354 rows.
+
+-   How was the data collected or generated?
+
+The data is collected monthly by the Seattle Public Library and the data set began on April 2005.
+
+-   Why was the data collected?
+
+The data was collected to see how many books people checked out during the years and what kind of books were collected.
+
+-   What, if any, ethical questions do you need to consider when working with this data?
+
+An ethical question that can be considered when working with this data is whether people that the data was collected from gave consent or knew that the data was being collected.
+
+-   What are possible limitations or problems with this data? (at least 200 words)
+
+A possible limitation or problem with this data set is that this data set is only looking at trends from 2017-2023. If someone were wanting to look at book trends or checkouts from previous years, they wouldn't be able to find it in this data set. The data set was slowly collected from 2017 until now and looks at items checked out at least 10 times a month. This data was only collected from the Seattle Public Library not all libraries in a state or nation. This could mean that if someone wanted to find trends for another state, they wouldn't be able to find them in this data set. One problem I found with this data set was why it was collected. The Seattle Public Data Program only specified why they collect data to improve the public understanding of public operations. I didn't find out why the library data set was collected from the Seattle Public Data Program, but I found it on the Seattle Public Library website stating that the purpose of collecting the data is to reflect on current trends. Overall, I think this data set has many limitations and problems because, like all data sets, not all of them are perfect to fit our needs.
 
 ### First Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+The first chart I chose is looking at the comparison of ebooks and books from 2017-2023. In 2018 had the most checkout for books, while in 2020 was the peak for ebook checkouts.
 
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
-```
+\`\`\``{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R")}`
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+The second chart I chose is a line graph showing the comparison of fiction and nonfiction book checkouts from 2017-2023. Looking at the chart, the peak checkout of nonfiction was in 2022, while the peak for fiction was 2020.
 
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+\`\`\``{r, echo = FALSE, warning = FALSE, code = readLines("chart2.R")}`
 
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
+### Your Choice: Third Trend Chart
 
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
+The third chart I chose to do is a bar chart. This chart looks at the audiobook checkouts over the time of 2017-2023. Looking at the chart, the peak checkout of audiobooks was in 2022.
 
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
-```
-
-### Your Choice
-
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
-```
-
-
+\`\`\``{r, echo = FALSE, warning = FALSE, code = readLines("chart3.R")}`
