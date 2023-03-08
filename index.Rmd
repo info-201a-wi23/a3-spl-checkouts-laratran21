@@ -4,13 +4,16 @@ name: "Lara Tran"
 output: html_document
 ---
 
+```{r echo = FALSE, message = FALSE, warning = FALSE, code = readLines('summary.R')}
+```
+
 ### Introduction
 
-In this assignment, I will be analyzing a data set from the Seattle Public Library. The data set they published is based on book titles, authors, checkout year / month, and others collected from the library. I will be answering questions I have about the data set, such as how many books were checked out a year, the most people checked out for a physical book, etc. I want to learn more about the trends of the Seaatle public Library book checkout trends which I am hoping to find answers with the values I use.
+In this assignment, I will be analyzing a data set from the Seattle Public Library. The data set the Seattle Library published is based on book titles, authors, checkout year / month, and others collected from the library. I will be answering questions I have about the data set, such as how many books were checked out a year, the most people checked out for a physical book, etc. I want to learn more about the trends of the Seattle public Library book checkout trends which I am hoping to find answers with the values I use.
 
 ### Summary Information
 
-One of the 5 values I wanted to find were (book_checkout) the most physical book checkouts in the whole data set and that came out to be 6397967. Another value I decided to look at is the E-book checkouts from the whole data set (ebook_checkout) and the value I got is 5053218. I also wanted to find the year with the most checkouts which is 2020 (checkout_max). The next value I decided to look for was the maximum checkouts for 2022 (max_checkout) which came out to be 2950. I also decided to find the year with the lowest checkouts and that is 2017 (min_checkouts).
+One of the 5 values I wanted to find were the most physical book checkouts in the whole data set and that came out to be `r book_checkouts`. Another value I decided to look at is the E-book checkouts from the whole data set and the value I got is `r ebook_checkout`. I also wanted to find the year with the most checkouts which `r checkout_max`. The next value I decided to look for was the maximum checkouts for 2022 which came out to be `r max_checkout`. I also decided to find the year with the lowest checkouts and that is `r min_checkouts`.
 
 ### The Dataset
 
@@ -40,18 +43,21 @@ A possible limitation or problem with this data set is that this data set is onl
 
 ### First Trends Over Time Chart
 
-The first chart I chose is looking at the comparison of ebooks and books from 2017-2023. In 2018 had the most checkout for books, while in 2020 was the peak for ebook checkouts.
+The first chart I chose is looking at the comparison of ebooks and books from 2017-2023. I think this graph comparison is important because libraries give us a variety of materials we can check out from. In my opinion a physical book and ebook, might be the two that are most checked out. For example, with ebooks people can have it through any technological device. From my personal experience, I haven't checked out a physical book from the library since middle or high school and now if I want to read a book I can read it online with an ebook. In 2018 had the most checkout for books and the lowest in 2023, while in 2020 was the peak for ebook checkouts and in 2023 with the lowest checkouts.
 
-\`\`\``{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R")}`
+```{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R", message = FALSE)}
+```
 
 ### Second Trends Over Time Chart
 
-The second chart I chose is a line graph showing the comparison of fiction and nonfiction book checkouts from 2017-2023. Looking at the chart, the peak checkout of nonfiction was in 2022, while the peak for fiction was 2020.
+The second chart I chose is a line graph showing the comparison of fiction and nonfiction book checkouts from 2017-2023. Non-fiction compares real world experiences, while fiction is based imaginations. I think this graph is important to look at because fiction books tell an imaginative story and authors create a story that leaves people thinking about hypothetical questions or even cliff hangers. While non-fiction gives us factual information. Looking at the chart, the peak checkout of nonfiction was in 2022 and the lowest in 2017, while the peak for fiction was 2020 and the lowest in 2023.
 
-\`\`\``{r, echo = FALSE, warning = FALSE, code = readLines("chart2.R")}`
+```{r, echo = FALSE, warning = FALSE, code = readLines("chart2.R"), message = FALSE}
+```
 
 ### Your Choice: Third Trend Chart
 
-The third chart I chose to do is a bar chart. This chart looks at the audiobook checkouts over the time of 2017-2023. Looking at the chart, the peak checkout of audiobooks was in 2022.
+The third chart I chose to do is a line chart. This chart looks at the audiobook checkouts over the time of 2017-2023. I think audiobooks are one important material checkout people can use because you can listen to books anywhere, like on the go, in the car, working out, etc. Audiobooks help people if they have a hard time reading and listening to books is way to comprehend them better. Looking at the chart, the peak checkout of audiobooks was in 2022 and the lowest is in 2023.
 
-\`\`\``{r, echo = FALSE, warning = FALSE, code = readLines("chart3.R")}`
+```{r echo = FALSE, message = TRUE, warning = FALSE, code = readLines("chart3.R")}
+```
