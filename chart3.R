@@ -13,12 +13,6 @@ audio_checkout <- spl_data %>%
   summarize(book_checkouts = sum(Checkouts))
 
 # Chart
-# ggplot(data = audio_checkout, aes (x = CheckoutYear, y = book_checkouts)) + geom_bar(stat = "identity") + 
-#  labs(
-#  title = "Total of Audiobook Checkouts 2017-2023",
-#  x = "Year",
-# y= "Total Checkouts")
-
 ggplot(data = audio_checkout) +
   geom_line(aes(x = CheckoutYear, y = book_checkouts, color = MaterialType)) +
   labs(title = "Audiobook Checkouts From 2017-2023", 
